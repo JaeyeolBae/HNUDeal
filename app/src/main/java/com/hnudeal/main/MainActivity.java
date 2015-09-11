@@ -1,10 +1,13 @@
 package com.hnudeal.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.hnudeal.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     @Override
@@ -36,7 +40,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onButton1Clicked(View v) {
-
+    public void moveLoginActivity(View v) {
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class );
+        startActivity(intent);
     }
+
+
 }
